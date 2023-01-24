@@ -1,4 +1,4 @@
-module simple-rest-api
+module github.com/10wpressure/simple-rest-api
 
 go 1.19
 

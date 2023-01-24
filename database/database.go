@@ -2,12 +2,12 @@ package database
 
 import (
 	"fmt"
+	"github.com/10wpressure/simple-rest-api/models"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
 	"log"
 	"os"
-	"simple-rest-api/models"
 )
 
 type DbInstance struct {

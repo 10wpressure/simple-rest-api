@@ -1,9 +1,9 @@
 package handlers
 
 import (
+	"github.com/10wpressure/simple-rest-api/database"
+	"github.com/10wpressure/simple-rest-api/models"
 	"github.com/gofiber/fiber/v2"
-	"simple-rest-api/database"
-	"simple-rest-api/models"
 )
 
 func Home(c *fiber.Ctx) error {

@@ -1,8 +1,8 @@
 package main
 
 import (
+	"github.com/10wpressure/simple-rest-api/handlers"
 	"github.com/gofiber/fiber/v2"
-	"simple-rest-api/handlers"
 )
 
 func setupRoutes(app *fiber.App) {

@@ -1,9 +1,9 @@
 package main
 
 import (
+	"github.com/10wpressure/simple-rest-api/database"
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/template/html"
-	"simple-rest-api/database"
 )
 
 func main() {
