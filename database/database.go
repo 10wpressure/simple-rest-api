@@ -30,14 +30,16 @@ func ConnectDb() {
 
 	if err != nil {
 		log.Fatal("Failed to connect to the database. \n", err)
-		os.Exit(2)
 	}
 
 	log.Println("Connected to the database")
 	db.Logger = logger.Default.LogMode(logger.Info)
 
 	log.Println("Running migrations")
-	db.AutoMigrate(&models.Fact{})
+	err = db.AutoMigrate(&models.Fact{})
+	if err != nil {
+		return
+	}
 
 	DB = DbInstance{Db: db}
 }

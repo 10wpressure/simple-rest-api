@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/10wpressure/simple-rest-api/database"
+	"github.com/10wpressure/simple-rest-api/handlers"
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/template/html"
 )
@@ -20,5 +21,10 @@ func main() {
 
 	app.Static("/", "./public")
 
-	app.Listen(":3000")
+	app.Use(handlers.NotFound)
+
+	err := app.Listen(":3000")
+	if err != nil {
+		return
+	}
 }

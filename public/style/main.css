@@ -21,10 +21,10 @@ time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
     font: inherit;
     vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -34,11 +34,12 @@ footer, header, hgroup, menu, nav, section {
 html {
     box-sizing: border-box;
 }
+
 *, *:before, *:after {
     box-sizing: inherit;
 }
 
-body,html {
+body, html {
     width: 100%;
     min-height: 100%;
     font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
@@ -47,18 +48,21 @@ body,html {
 ol, ul {
     list-style: none;
 }
+
 blockquote, q {
     quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
-    content: '';
     content: none;
 }
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
 body {
     line-height: 1;
 
@@ -70,7 +74,7 @@ body {
 
     background: -webkit-linear-gradient(315deg, hsla(64, 41%, 92%, 1) 0%, hsla(196, 83%, 84%, 1) 50%, hsla(305, 75%, 83%, 1) 100%);
 
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F2F3E2", endColorstr="#B2E5F8", GradientType=1 );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#F2F3E2", endColorstr="#B2E5F8", GradientType=1);
 }
 
 button {
@@ -79,6 +83,10 @@ button {
     font-family: system-ui;
     font-size: 1rem;
     padding: 1rem 2rem;
+}
+
+a {
+    text-decoration: none;
 }
 
 h1 {
@@ -138,18 +146,56 @@ form input[type="submit"] {
 /* General */
 .btn {
     padding: 10px 16px;
-    background-color: white;
-    box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px, rgba(15, 23, 42, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px;
-    color: #555555;
     font-size: 14px;
     font-weight: 700;
     text-decoration: none;
     border-radius: 10px;
-    border: 1px solid rgba(15,23,42,.1);
+
+    background-color: white;
+    box-shadow: rgb(255, 255, 255) 0 0 0 0, rgba(15, 23, 42, 0.1) 0 0 0 1px, rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.1) 0 4px 6px -4px;
+    color: #555555;
+    border: 1px solid rgba(15, 23, 42, .1);
 }
 
 .btn:hover {
     background-color: rgba(252, 252, 252, 1);
+
+}
+
+.btn-secondary {
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: rgb(75, 83, 102);
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px, rgba(15, 23, 42, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px;
+    color: white;
+    border: 1px solid rgba(15, 23, 42, .1);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(75, 83, 102, 0.8);
+
+}
+
+.btn-danger {
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: rgb(255, 23, 68);
+    color: white;
+    border: 1px solid rgba(15, 23, 42, .1);
+}
+
+.btn-danger {
+    box-shadow: rgb(255, 255, 255) 0 0 0 0, rgba(15, 23, 42, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px;
+}
+
+.btn-danger:hover {
+    background-color: rgba(255, 23, 68, 0.8);
 
 }
 
@@ -173,6 +219,11 @@ form input[type="submit"] {
     padding: 30px 20px;
     background-color: white;
     border-radius: 10px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
 }
 
 /* Site Header */
@@ -199,7 +250,7 @@ form input[type="submit"] {
 .fact-item {
     display: flex;
     flex-direction: column;
-    justify-content: column;
+    justify-content: inherit;
     margin-bottom: 10px;
     padding: 16px 20px;
     color: #555555;
@@ -228,7 +279,7 @@ form input[type="submit"] {
 }
 
 .fact-item .question {
-    margin-bottom:10px;
+    margin-bottom: 10px;
 }
 
 .fact-item .answer {
